@@ -11,6 +11,6 @@ class MusicAlbum < Item
   private
 
   def can_be_archived?
-    @publish_date > 10
+    @publish_date > 10 && @on_spotify
   end
 end
