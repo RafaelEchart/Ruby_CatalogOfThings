@@ -1,5 +1,5 @@
 class Item
-  def initialize(genre, author, source, label, publish_date)
+  def initialize(publish_date, genre: '', author: '', source: '', label: '')
     @id = Random.rand(1..10_000)
     @genre = genre
     @author = author
