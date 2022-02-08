@@ -8,3 +8,4 @@
 ## Built With
 
 - Ruby
+- Rubocop
