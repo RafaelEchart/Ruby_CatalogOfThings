@@ -12,5 +12,3 @@ class MusicAlbum < Item
     @publish_date > 10 && @on_spotify
   end
 end
-
-p MusicAlbum.new('R&B', '3/2/3', on_spotify: true)

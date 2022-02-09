@@ -6,6 +6,8 @@ def menu
   choice(selected_option)
 end
 
+
+
 def choice(selected_option)
   case selected_option
 
@@ -14,8 +16,20 @@ def choice(selected_option)
   when '2'
     # puts 'List of all music albums'
   when '3'
-    # puts 'List of all movies'
-
+    # List of games
+  when '4'
+    # List of all genre
+  when '5'
+    #List of all labels
+  when '6'
+    #List of authors
+  when '7'
+    #Add a book 
+  when '8'
+    # Add a music album
+  when '9'
+    #Add a game
+    
   end
 end
 
