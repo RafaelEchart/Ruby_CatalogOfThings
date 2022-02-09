@@ -13,7 +13,7 @@ class List
 
   def self.list
     @options.each_with_index do |option, idx|
-      puts "#{idx + 1}) #{option} "
+      puts "#{idx}) #{option} "
     end
   end
 end

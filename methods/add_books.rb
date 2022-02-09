@@ -12,15 +12,12 @@ class AddBooks
   include BooksInputs
 
   def add    
-    author, title, color, genre, publish_date = general_inputs
+    author, label, genre, publish_date = general_inputs
     publisher, cover_state = books_input
-
     
-    new_label = Label.new(title, color)
-    
-    
-    new_book = Book.new(publisher, cover_state, publish_date, genre, author, new_label)
+    new_book = Book.new(publisher, cover_state, publish_date, genre, author, label)
     add_books(new_book)
+    label.add_item(new_book)
 
 
     genre.add_item(new_book)
