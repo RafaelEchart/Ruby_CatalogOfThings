@@ -32,7 +32,7 @@ module LabelInputs
   end
 
   def new_label 
-    puts 'Please enter the Label title'
+    print 'Please enter the Label title: '
     label_title = gets.chomp
     print 'Enter a colour: '
     label_colour = gets.chomp

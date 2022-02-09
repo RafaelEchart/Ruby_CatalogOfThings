@@ -12,7 +12,6 @@ module AuthorInputs
         if saved_authors.empty?
           author_selected = new_author
         else
-    
           author_selected = saved_authors.length + 1
           while author_selected > saved_authors.length
             puts "\nSelect an option from the list [AUTHOR]: "
@@ -24,7 +23,6 @@ module AuthorInputs
             print "Add new author\n"
             author_selected = gets.chomp.to_i
           end
-    
           if author_selected == saved_authors.length
             author_selected = new_author
           else

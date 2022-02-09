@@ -1,5 +1,5 @@
 class List
-  @options = ['List of all',
+  @options = ['List all books',
               'List all music albums',
               'List all movies',
               'List of games',

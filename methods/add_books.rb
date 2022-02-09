@@ -12,17 +12,16 @@ class AddBooks
   include BooksInputs
 
   def add    
+    name, publisher, cover_state = books_input
     author, label, genre, publish_date = general_inputs
-    publisher, cover_state = books_input
     
-    new_book = Book.new(publisher, cover_state, publish_date, genre, author, label)
+    new_book = Book.new(name, publisher, cover_state, publish_date, genre, author, label)
     add_books(new_book)
+
+
     label.add_item(new_book)
-
-
     genre.add_item(new_book)
     author.add_item(new_book)
-    #SAVE THE BOOK INTO LABEL
    
     puts 'Book created successfully'
   end

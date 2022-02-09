@@ -8,11 +8,12 @@ module GeneralInputs
   include LabelInputs
 
   def general_inputs
-    label = check_labels
     author = check_authors
     genre = check_genres
+    label = check_labels
     print 'Please enter publish date in a format [ YYYY-MM-DD ]: '
     publish_date = gets.chomp
+
 
     [author, label, genre, publish_date]
   end
