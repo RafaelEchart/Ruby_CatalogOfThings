@@ -13,7 +13,7 @@ class Item
     @genre = genre
     @genre.item.push(self) unless @genre.include?(genre)
   end
-  
+
   def move_to_archive
     @archive = can_be_archived?
   end
