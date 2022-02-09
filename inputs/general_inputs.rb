@@ -6,7 +6,6 @@ module GeneralInputs
 
   def general_inputs
     author = check_authors
-    # puts "Please enter the label (e.g. 'Gift', 'New'): "
     print 'Title: '
     title = gets.chomp
     print 'Color: '
@@ -14,6 +13,8 @@ module GeneralInputs
     genre = check_genres
     print 'Please enter publish date in a format [ YYYY-MM-DD ]: '
     publish_date = gets.chomp
+
+    #Ask for labels
     [author, title, color, genre, publish_date]
   end
 
