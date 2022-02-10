@@ -41,7 +41,8 @@ class App
     when '9'
       @add_games.add
     when '10'
-      # Exit
+      puts "\nThanks for your visit, have a great day!"
+      abort
 
     end
     menu

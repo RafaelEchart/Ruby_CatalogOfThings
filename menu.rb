@@ -13,5 +13,6 @@ class List
     @options.each_with_index do |option, idx|
       puts "#{idx + 1}) #{option} "
     end
+    puts "#{@options.length + 1}) Exit"
   end
 end
