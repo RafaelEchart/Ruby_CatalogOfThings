@@ -3,7 +3,6 @@ require_relative '../classes/game'
 require_relative '../inputs/game_inputs'
 require_relative '../memory/games_memory'
 
-
 class AddGames
   include GamesMemory
   include GeneralInputs

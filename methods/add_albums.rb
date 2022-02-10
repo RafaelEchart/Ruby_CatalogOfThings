@@ -3,7 +3,6 @@ require_relative '../classes/music_album'
 require_relative '../inputs/album_inputs'
 require_relative '../memory/album_memory'
 
-
 class AddAlbums
   include AlbumsMemory
   include GeneralInputs
