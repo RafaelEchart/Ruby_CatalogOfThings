@@ -1,10 +1,11 @@
 require_relative './methods/add_books'
+require_relative './methods/show_books'
 require_relative 'menu'
 
 class App
-  
   def welcome
     @add_books = AddBooks.new
+    @show_books = ShowBooks.new
     menu
   end
 
@@ -12,7 +13,7 @@ class App
     case selected_option
 
     when '1'
-      # List of all books
+      @show_books.show
     when '2'
       # puts 'List of all music albums'
     when '3'

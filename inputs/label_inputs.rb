@@ -23,15 +23,15 @@ module LabelInputs
         label_selected = gets.chomp.to_i
       end
 
-      if label_selected == saved_labels.length
-        label_selected = new_label
-      else
-        label_selected = saved_labels[label_selected]
-      end
+      label_selected = if label_selected == saved_labels.length
+                         new_label
+                       else
+                         saved_labels[label_selected]
+                       end
     end
   end
 
-  def new_label 
+  def new_label
     print 'Please enter the Label title: '
     label_title = gets.chomp
     print 'Enter a colour: '
@@ -40,5 +40,4 @@ module LabelInputs
     add_label(label_selected)
     label_selected
   end
-
 end

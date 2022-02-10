@@ -11,18 +11,17 @@ class AddBooks
   include GeneralInputs
   include BooksInputs
 
-  def add    
+  def add
     name, publisher, cover_state = books_input
     author, label, genre, publish_date = general_inputs
-    
+
     new_book = Book.new(name, publisher, cover_state, publish_date, genre, author, label)
     add_books(new_book)
-
 
     label.add_item(new_book)
     genre.add_item(new_book)
     author.add_item(new_book)
-   
+
     puts 'Book created successfully'
   end
 end
