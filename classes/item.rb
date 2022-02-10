@@ -1,9 +1,8 @@
 class Item
-  def initialize(publish_date, genre: '', author: '', source: '', label: '')
+  def initialize(publish_date, genre: '', author: '', label: '')
     @id = Random.rand(1..10_000)
     @genre = genre
     @author = author
-    @source = source
     @label = label
     @publish_date = publish_date
     @archive = false
@@ -12,6 +11,11 @@ class Item
   def add_genre(genre)
     @genre = genre
     @genre.item.push(self) unless @genre.include?(genre)
+  end
+
+  def add_author(author)
+    @author = author
+    @author.item.push(self) unless @author.include?(author)
   end
 
   def move_to_archive
