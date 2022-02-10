@@ -1,12 +1,22 @@
 [
     {
-        "previous_id": "#<MusicAlbum:0x000001a5d449aa90>",
-        "id": 1426,
+        "previous_id": "#<MusicAlbum:0x000001b50814f500>",
+        "id": 9418,
         "name": "Album 1 ",
-        "genre": "#<Genre:0x000001a5d44c6e60>",
-        "author": "#<Author:0x000001a5d44d0690>",
-        "label": "#<Label:0x000001a5d44c64d8>",
-        "publish_date": "2020",
+        "genre": "#<Genre:0x000001b5081582b8>",
+        "author": "#<Author:0x000001b508184ac0>",
+        "label": "#<Label:0x000001b508176498>",
+        "publish_date": "1999",
         "on_spotify": true
+    },
+    {
+        "previous_id": "#<MusicAlbum:0x000001b50814dac0>",
+        "id": 3714,
+        "name": "Album 2 ",
+        "genre": "#<Genre:0x000001b508177c58>",
+        "author": "#<Author:0x000001b50815b648>",
+        "label": "#<Label:0x000001b508176498>",
+        "publish_date": "2020",
+        "on_spotify": false
     }
 ]

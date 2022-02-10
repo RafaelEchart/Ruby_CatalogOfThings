@@ -1,13 +1,24 @@
 [
     {
-        "previous_id": "#<Book:0x000001a5d44c5a60>",
-        "id": 8503,
+        "previous_id": "#<Book:0x000001b508176240>",
+        "id": 8401,
         "name": "Book 1 ",
-        "genre": "#<Genre:0x000001a5d44c6e60>",
-        "author": "#<Author:0x000001a5d44d0690>",
-        "label": "#<Label:0x000001a5d44c64d8>",
-        "publish_date": "20202",
+        "genre": "#<Genre:0x000001b508177c58>",
+        "author": "#<Author:0x000001b508184ac0>",
+        "label": "#<Label:0x000001b508176498>",
+        "publish_date": "2020",
         "publisher": "none ",
-        "cover_state": "medium "
+        "cover_state": "Medium"
+    },
+    {
+        "previous_id": "#<Book:0x000001b50815ad60>",
+        "id": 2785,
+        "name": "Book 2 ",
+        "genre": "#<Genre:0x000001b508177c58>",
+        "author": "#<Author:0x000001b50815b648>",
+        "label": "#<Label:0x000001b508176498>",
+        "publish_date": "2021",
+        "publisher": "none ",
+        "cover_state": "Bad"
     }
 ]

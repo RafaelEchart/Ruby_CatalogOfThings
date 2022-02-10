@@ -1,21 +1,23 @@
 [
     {
-        "previous_id": "#<Label:0x000001a5d44c64d8>",
-        "id": 50,
-        "title": "label 1 m",
-        "color": "green",
+        "previous_id": "#<Label:0x000001b508176498>",
+        "id": 70,
+        "title": "Label 1 ",
+        "color": "Red",
         "items": [
-            "#<Book:0x000001a5d44c5a60>",
-            "#<MusicAlbum:0x000001a5d449aa90>"
+            "#<Book:0x000001b508176240>",
+            "#<Book:0x000001b50815ad60>",
+            "#<MusicAlbum:0x000001b50814f500>",
+            "#<MusicAlbum:0x000001b50814dac0>"
         ]
     },
     {
-        "previous_id": "#<Label:0x000001a5d44ae888>",
-        "id": 24,
-        "title": "Games",
-        "color": "green",
+        "previous_id": "#<Label:0x000001b5081426c0>",
+        "id": 4,
+        "title": "Games ",
+        "color": "Gray",
         "items": [
-            "#<Game:0x000001a5d44ae608>"
+            "#<Game:0x000001b5081420a8>"
         ]
     }
 ]

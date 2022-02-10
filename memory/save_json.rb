@@ -84,7 +84,7 @@ module SaveJSON
     end
     File.write('./data/genres.json', JSON.dump(array))
   end
-  
+
   def check_label_memory
     labels = show_labels
     return if labels.empty?
@@ -95,5 +95,4 @@ module SaveJSON
     end
     File.write('./data/labels.json', JSON.dump(array))
   end
-
 end
