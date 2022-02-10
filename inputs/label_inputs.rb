@@ -13,11 +13,7 @@ module LabelInputs
     else
       label_selected = saved_labels.length + 1
       while label_selected > saved_labels.length
-        puts "\nSelect an option from the list [LABEL]: "
-        saved_labels.each do |label|
-          print "#{saved_labels.find_index(label)}) "
-          print "Title: #{label.title}, Color: #{label.color}\n"
-        end
+        show_saved_labels(saved_labels)
         print "#{saved_labels.length}) "
         print "Add new label\n"
         label_selected = gets.chomp.to_i
@@ -28,6 +24,14 @@ module LabelInputs
       else
         saved_labels[label_selected]
       end
+    end
+  end
+
+  def show_saved_labels(data)
+    puts "\nSelect an option from the list [LABEL]: "
+    data.each do |label|
+      print "#{data.find_index(label)}) "
+      print "Title: #{label.title}, Color: #{label.color}\n"
     end
   end
 

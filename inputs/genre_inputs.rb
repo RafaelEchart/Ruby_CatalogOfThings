@@ -14,11 +14,7 @@ module GenreInputs
 
       genre_selected = saved_genres.length + 1
       while genre_selected > saved_genres.length
-        puts "\nSelect an option from the list [GENRE]: "
-        saved_genres.each do |genre|
-          print "#{saved_genres.find_index(genre)}) "
-          print "#{genre.name}\n"
-        end
+        show_saved_genres(saved_genres)
         print "#{saved_genres.length}) "
         print "Add new genre\n"
         genre_selected = gets.chomp.to_i
@@ -31,6 +27,14 @@ module GenreInputs
                        end
     end
     genre_selected
+  end
+
+  def show_saved_genres(data)
+    puts "\nSelect an option from the list [GENRE]: "
+    data.each do |genre|
+      print "#{data.find_index(genre)}) "
+      print "#{genre.name}\n"
+    end
   end
 
   def new_genre

@@ -13,11 +13,7 @@ module AuthorInputs
     else
       author_selected = saved_authors.length + 1
       while author_selected > saved_authors.length
-        puts "\nSelect an option from the list [AUTHOR]: "
-        saved_authors.each do |author|
-          print "#{saved_authors.find_index(author)}) "
-          print "First Name: #{author.first_name}, Last Name: #{author.last_name}\n"
-        end
+        show_saved_authors(saved_authors)
         print "#{saved_authors.length}) "
         print "Add new author\n"
         author_selected = gets.chomp.to_i
@@ -29,6 +25,14 @@ module AuthorInputs
                         end
     end
     author_selected
+  end
+
+  def show_saved_authors(data)
+    puts "\nSelect an option from the list [AUTHOR]: "
+    data.each do |author|
+      print "#{data.find_index(author)}) "
+      print "First Name: #{author.first_name}, Last Name: #{author.last_name}\n"
+    end
   end
 
   def new_author
