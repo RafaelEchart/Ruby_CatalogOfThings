@@ -1,11 +1,13 @@
 require_relative './methods/add_books'
 require_relative './methods/show_books'
+require_relative './methods/add_albums'
 require_relative 'menu'
 
 class App
   def welcome
     @add_books = AddBooks.new
     @show_books = ShowBooks.new
+    @add_albums = AddAlbums.new
     menu
   end
 
@@ -27,7 +29,7 @@ class App
     when '7'
       @add_books.add
     when '8'
-      # Add a music album
+      @add_albums.add
     when '9'
       # Add a game
     when '10'
