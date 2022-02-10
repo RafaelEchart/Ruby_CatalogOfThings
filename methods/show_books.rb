@@ -15,6 +15,7 @@ class ShowBooks
         @books.each do |book|
           puts "#{@books.find_index(book)}) Title: #{book.name}, Author: #{book.author.first_name}"
         end
+        puts ""
         puts "#{@books.length}) EXIT TO MENU"
         puts 'Please select a book for more information'
         selected_book = gets.chomp.to_i

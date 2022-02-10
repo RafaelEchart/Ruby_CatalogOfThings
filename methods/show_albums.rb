@@ -15,6 +15,7 @@ class ShowAlbums
         @albums.each do |album|
           puts "#{@albums.find_index(album)}) Title: #{album.name}, Author: #{album.author.first_name}, On Spotify: #{album.on_spotify ? "Yes" : "No"}"
         end
+        puts ""
         puts "#{@albums.length}) EXIT TO MENU"
         puts 'Please select a album for more information'
         selected_album = gets.chomp.to_i
