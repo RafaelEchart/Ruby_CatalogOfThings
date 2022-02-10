@@ -1,45 +1,46 @@
-require_relative '../memory/genre_memory'
+require_relative '../memory/author_memory.rb'
 
-class ShowGenre
-  include GenreMemory
+class ShowAuthor
+  include AuthorMemory
 
   def initialize
-    @genres = show_genres
+    @authors  = show_authors
   end
 
   def show
     puts ''
-    if @genres.length.positive?
-      selected_genre = @genres.length + 1
-      while selected_genre > @genres.length
-        @genres.each do |genre|
-          puts "#{@genres.find_index(genre)}) Name: #{genre.name}, Count: #{genre.items.length}"
+    if @authors.length.positive?
+      selected_author = @authors.length + 1
+      while selected_author > @authors.length
+        @authors.each do |author|
+          puts "#{@authors.find_index(author)}) Name: #{author.first_name} #{author.last_name}, Count: #{author.items.length}"
         end
         puts ''
-        puts "#{@genres.length}) EXIT TO MENU"
+        puts "#{@authors.length}) EXIT TO MENU"
         puts 'Please select a genre for more information'
-        selected_genre = gets.chomp.to_i
+        selected_author = gets.chomp.to_i
       end
 
-      if selected_genre < @genres.length
+      if selected_author < @authors.length
         books = []
         albums = []
         games = []
 
-        @genres[selected_genre].items.each do |item|
+        @authors[selected_author].items.each do |item|
           instance_name_class = item.class.to_s
           books.push(item) if instance_name_class == 'Book'
           games.push(item) if instance_name_class == 'Game'
           albums.push(item) if instance_name_class == 'MusicAlbum'
         end
 
-        puts "GENRE: #{@genres[selected_genre].name}, COUNT: #{@genres[selected_genre].items.length} "
-        puts '-------------------------------------------------------------'
+        puts "AUTHOR: #{@authors[selected_author].first_name} #{@authors[selected_author].last_name}, COUNT: #{@authors[selected_author].items.length} "
+        puts '------------------------------------------------------'
 
         if books.length.positive?
           puts ''
           puts "               Books [#{books.length}]                     "
           puts ''
+
           books.each do |book|
             puts "- Title: #{book.name}, Author: #{book.author.first_name}"
           end
@@ -48,9 +49,10 @@ class ShowGenre
         end
 
         if albums.length.positive?
-          puts ''
+          puts ''   
           puts "               Albums [#{albums.length}]                   "
           puts ''
+
           albums.each do |album|
             puts "- Title: #{album.name}, Author: #{album.author.first_name}"
           end

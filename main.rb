@@ -5,6 +5,7 @@ require_relative './methods/show_albums'
 require_relative './methods/add_games'
 require_relative './methods/show_games'
 require_relative './methods/show_genre'
+require_relative './methods/show_authors'
 require_relative 'menu'
 
 class App
@@ -14,8 +15,9 @@ class App
     @add_albums = AddAlbums.new
     @show_albums = ShowAlbums.new
     @add_games = AddGames.new
-    @show_albums = ShowGames.new
-    @show_genre = ShowGenre.new
+    @show_games = ShowGames.new
+    @show_genres = ShowGenre.new
+    @show_authors = ShowAuthor.new
     menu
   end
 
@@ -27,13 +29,13 @@ class App
     when '2'
       @show_albums.show
     when '3'
-      @show_albums.show
+      @show_games.show
     when '4'
-      @show_genre.show
+      @show_genres.show
     when '5'
       # List of all labels
     when '6'
-      # List of authors
+      @show_authors.show
     when '7'
       @add_books.add
     when '8'
