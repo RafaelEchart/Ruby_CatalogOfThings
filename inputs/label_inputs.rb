@@ -9,7 +9,7 @@ module LabelInputs
     label_selected = nil
 
     if saved_labels.empty?
-      label_selected = new_label
+      new_label
     else
       label_selected = saved_labels.length + 1
       while label_selected > saved_labels.length
@@ -23,11 +23,11 @@ module LabelInputs
         label_selected = gets.chomp.to_i
       end
 
-      label_selected = if label_selected == saved_labels.length
-                         new_label
-                       else
-                         saved_labels[label_selected]
-                       end
+      if label_selected == saved_labels.length
+        new_label
+      else
+        saved_labels[label_selected]
+      end
     end
   end
 

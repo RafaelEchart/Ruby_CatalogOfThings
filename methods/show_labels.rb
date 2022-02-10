@@ -1,4 +1,4 @@
-require_relative '../memory/label_memory.rb'
+require_relative '../memory/label_memory'
 
 class ShowLabel
   include LabelMemory

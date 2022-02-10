@@ -13,7 +13,10 @@ class ShowAlbums
       selected_album = @albums.length + 1
       while selected_album > @albums.length
         @albums.each do |album|
-          puts "#{@albums.find_index(album)}) Title: #{album.name}, Author: #{album.author.first_name}, On Spotify: #{album.on_spotify ? 'Yes' : 'No'}"
+          on_spotify = album.on_spotify ? 'Yes' : 'No'
+          name = album.name
+          author = album.author.first_name
+          puts "#{@albums.find_index(album)}) Title: #{name}, Author: #{author}, On Spotify: #{on_spotify}"
         end
         puts ''
         puts "#{@albums.length}) EXIT TO MENU"

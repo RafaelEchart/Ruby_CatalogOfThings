@@ -1,10 +1,10 @@
-require_relative '../memory/author_memory.rb'
+require_relative '../memory/author_memory'
 
 class ShowAuthor
   include AuthorMemory
 
   def initialize
-    @authors  = show_authors
+    @authors = show_authors
   end
 
   def show
@@ -13,7 +13,8 @@ class ShowAuthor
       selected_author = @authors.length + 1
       while selected_author > @authors.length
         @authors.each do |author|
-          puts "#{@authors.find_index(author)}) Name: #{author.first_name} #{author.last_name}, Count: #{author.items.length}"
+          author_name = "#{author.first_name} #{author.last_name}"
+          puts "#{@authors.find_index(author)}) Name: #{author_name} , Count: #{author.items.length}"
         end
         puts ''
         puts "#{@authors.length}) EXIT TO MENU"
@@ -33,7 +34,9 @@ class ShowAuthor
           albums.push(item) if instance_name_class == 'MusicAlbum'
         end
 
-        puts "AUTHOR: #{@authors[selected_author].first_name} #{@authors[selected_author].last_name}, COUNT: #{@authors[selected_author].items.length} "
+        author_name = "#{@authors[selected_author].first_name} #{@authors[selected_author].last_name}"
+        author_count = @authors[selected_author].items.length.to_s
+        puts "AUTHOR: #{author_name} , COUNT: #{author_count} "
         puts '------------------------------------------------------'
 
         if books.length.positive?
@@ -49,7 +52,7 @@ class ShowAuthor
         end
 
         if albums.length.positive?
-          puts ''   
+          puts ''
           puts "               Albums [#{albums.length}]                   "
           puts ''
 
