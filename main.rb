@@ -26,24 +26,15 @@ class App
   def choice(selected_option)
     case selected_option
 
-    when '1'
-      @show_books.show
-    when '2'
-      @show_albums.show
-    when '3'
-      @show_games.show
-    when '4'
-      @show_genres.show
-    when '5'
-      @show_labels.show
-    when '6'
-      @show_authors.show
-    when '7'
-      @add_books.add
-    when '8'
-      @add_albums.add
-    when '9'
-      @add_games.add
+    when '1' then @show_books.show
+    when '2' then @show_albums.show
+    when '3' then @show_games.show
+    when '4' then @show_genres.show
+    when '5' then @show_labels.show
+    when '6' then @show_authors.show
+    when '7' then @add_books.add
+    when '8' then @add_albums.add
+    when '9' then @add_games.add
     when '10'
       puts "\nThanks for your visit, have a great day!"
       abort
