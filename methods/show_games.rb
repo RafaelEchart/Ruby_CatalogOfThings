@@ -12,10 +12,7 @@ class ShowGames
     if @games.length.positive?
       selected_game = @games.length + 1
       while selected_game > @games.length
-        @games.each do |game|
-          puts "#{@games.find_index(game)}) Title: #{game.name}, Author: #{game.author.first_name}"
-        end
-        puts ''
+        show_saved_games(@games)
         puts "#{@games.length}) EXIT TO MENU"
         puts 'Please select a game for more information'
         selected_game = gets.chomp.to_i
@@ -33,6 +30,12 @@ class ShowGames
     else
       puts 'Empty Library, add a game first'
 
+    end
+  end
+
+  def show_saved_games(data)
+    data.each do |game|
+      puts "#{data.find_index(game)}) Title: #{game.name}, Author: #{game.author.first_name}"
     end
   end
 end
