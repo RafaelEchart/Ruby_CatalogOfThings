@@ -6,6 +6,7 @@ require_relative './methods/add_games'
 require_relative './methods/show_games'
 require_relative './methods/show_genre'
 require_relative './methods/show_authors'
+require_relative './methods/show_labels'
 require_relative 'menu'
 
 class App
@@ -18,6 +19,7 @@ class App
     @show_games = ShowGames.new
     @show_genres = ShowGenre.new
     @show_authors = ShowAuthor.new
+    @show_labels = ShowLabel.new
     menu
   end
 
@@ -33,7 +35,7 @@ class App
     when '4'
       @show_genres.show
     when '5'
-      # List of all labels
+      @show_labels.show
     when '6'
       @show_authors.show
     when '7'
