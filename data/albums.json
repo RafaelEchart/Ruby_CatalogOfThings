@@ -1,0 +1,12 @@
+[
+    {
+        "previous_id": "#<MusicAlbum:0x000002a7f0ee2cb8>",
+        "id": 2712,
+        "name": "Album 1 ",
+        "genre": "#<Genre:0x000002a7f0eef490>",
+        "author": "#<Author:0x000002a7f10c0058>",
+        "label": "#<Label:0x000002a7f0eeee28>",
+        "publish_date": "0",
+        "on_spotify": false
+    }
+]
