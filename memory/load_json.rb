@@ -21,6 +21,7 @@ module LoadData
   include GenreMemory
   include LabelMemory
 
+  # rubocop:disable Style/ClassVars
   @@array_genres = []
   @@array_authors = []
   @@array_labels = []
@@ -29,7 +30,9 @@ module LoadData
     create_genres
     create_authors
     create_labels
-    check
+    create_books
+    create_albums
+    create_games
   end
 
   def create_genres
@@ -71,25 +74,97 @@ module LoadData
     end
   end
 
+  def create_books
+    return unless File.file?('./data/books.json')
 
+    file = File.read('./data/books.json')
+    data_hash = JSON.parse(file)
 
+    data_hash.each do |data|
+      matched_genre, matched_author, matched_label = ''
 
-  def check 
-  puts "Genre array"
-  puts @@array_genres
-  puts "Local genre memory"
-  puts show_genres
-  
-  puts "--------------------------------------"
-  puts "Author array"
-  puts @@array_authors
-  puts "Local author memory"
-  puts show_authors
- 
-  puts "--------------------------------------"
-  puts "labels array"
-  puts @@array_labels
-  puts "Local labels memory"
-  puts show_labels
-end 
+      @@array_genres.each do |genre|
+        matched_genre = genre[:new_object] if genre[:previous_id] == data['genre']
+      end
+
+      @@array_authors.each do |author|
+        matched_author = author[:new_object] if author[:previous_id] == data['author']
+      end
+
+      @@array_labels.each do |label|
+        matched_label = label[:new_object] if label[:previous_id] == data['label']
+      end
+
+      new_book = Book.new(data['name'], data['publisher'], data['cover_state'], data['publish_date'], matched_genre,
+                          matched_author, matched_label)
+      add_books(new_book)
+
+      matched_label.add_item(new_book)
+      matched_genre.add_item(new_book)
+      matched_author.add_item(new_book)
+    end
+  end
+
+  def create_albums
+    return unless File.file?('./data/albums.json')
+
+    file = File.read('./data/albums.json')
+    data_hash = JSON.parse(file)
+
+    data_hash.each do |data|
+      matched_genre, matched_author, matched_label = ''
+
+      @@array_genres.each do |genre|
+        matched_genre = genre[:new_object] if genre[:previous_id] == data['genre']
+      end
+
+      @@array_authors.each do |author|
+        matched_author = author[:new_object] if author[:previous_id] == data['author']
+      end
+
+      @@array_labels.each do |label|
+        matched_label = label[:new_object] if label[:previous_id] == data['label']
+      end
+
+      new_album = MusicAlbum.new(data['name'], data['publish_date'], matched_genre,
+                                 matched_author, matched_label, on_spotify: data['on_spotify'])
+
+      add_albums(new_album)
+      matched_label.add_item(new_album)
+      matched_genre.add_item(new_album)
+      matched_author.add_item(new_album)
+    end
+  end
+
+  def create_games
+    return unless File.file?('./data/games.json')
+
+    file = File.read('./data/games.json')
+    data_hash = JSON.parse(file)
+
+    data_hash.each do |data|
+      matched_genre, matched_author, matched_label = ''
+
+      @@array_genres.each do |genre|
+        matched_genre = genre[:new_object] if genre[:previous_id] == data['genre']
+      end
+
+      @@array_authors.each do |author|
+        matched_author = author[:new_object] if author[:previous_id] == data['author']
+      end
+
+      @@array_labels.each do |label|
+        matched_label = label[:new_object] if label[:previous_id] == data['label']
+      end
+
+      new_game = Game.new(data['name'], data['publish_date'], matched_genre,
+                          matched_author, matched_label, data['last_played'], data['multiplayer'])
+
+      add_games(new_game)
+      matched_label.add_item(new_game)
+      matched_genre.add_item(new_game)
+      matched_author.add_item(new_game)
+    end
+  end
 end
+# rubocop:enable Style/ClassVars
