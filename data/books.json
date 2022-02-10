@@ -1,13 +1,13 @@
 [
     {
-        "previous_id": "#<Book:0x000002a7f0eee9f0>",
-        "id": 1709,
+        "previous_id": "#<Book:0x000001a5d44c5a60>",
+        "id": 8503,
         "name": "Book 1 ",
-        "genre": "#<Genre:0x000002a7f0eef490>",
-        "author": "#<Author:0x000002a7f10c0058>",
-        "label": "#<Label:0x000002a7f0eeee28>",
-        "publish_date": "",
-        "publisher": "none",
-        "cover_state": "bad"
+        "genre": "#<Genre:0x000001a5d44c6e60>",
+        "author": "#<Author:0x000001a5d44d0690>",
+        "label": "#<Label:0x000001a5d44c64d8>",
+        "publish_date": "20202",
+        "publisher": "none ",
+        "cover_state": "medium "
     }
 ]

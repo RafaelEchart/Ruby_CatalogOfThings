@@ -1,13 +1,13 @@
 [
     {
-        "previous_id": "#<Game:0x0000022dad2db108>",
-        "id": 5887,
-        "name": "12",
-        "genre": "#<Genre:0x0000022dad2dbbd0>",
-        "author": "#<Author:0x0000022dad4f0088>",
-        "label": "#<Label:0x0000022dad2db4a0>",
-        "publish_date": "12",
-        "last_played": "12",
-        "multiplayer": false
+        "previous_id": "#<Game:0x000001a5d44ae608>",
+        "id": 1561,
+        "name": "Game 1 ",
+        "genre": "#<Genre:0x000001a5d44c6e60>",
+        "author": "#<Author:0x000001a5d44d0690>",
+        "label": "#<Label:0x000001a5d44ae888>",
+        "publish_date": "2020",
+        "last_played": "123",
+        "multiplayer": true
     }
 ]

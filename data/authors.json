@@ -1,0 +1,13 @@
+[
+    {
+        "previous_id": "#<Author:0x000001a5d44d0690>",
+        "id": 278,
+        "first_name": "rafael ",
+        "last_name": "echart",
+        "items": [
+            "#<Book:0x000001a5d44c5a60>",
+            "#<Game:0x000001a5d44ae608>",
+            "#<MusicAlbum:0x000001a5d449aa90>"
+        ]
+    }
+]

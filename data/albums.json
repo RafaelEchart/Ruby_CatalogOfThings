@@ -1,12 +1,12 @@
 [
     {
-        "previous_id": "#<MusicAlbum:0x000002a7f0ee2cb8>",
-        "id": 2712,
+        "previous_id": "#<MusicAlbum:0x000001a5d449aa90>",
+        "id": 1426,
         "name": "Album 1 ",
-        "genre": "#<Genre:0x000002a7f0eef490>",
-        "author": "#<Author:0x000002a7f10c0058>",
-        "label": "#<Label:0x000002a7f0eeee28>",
-        "publish_date": "0",
-        "on_spotify": false
+        "genre": "#<Genre:0x000001a5d44c6e60>",
+        "author": "#<Author:0x000001a5d44d0690>",
+        "label": "#<Label:0x000001a5d44c64d8>",
+        "publish_date": "2020",
+        "on_spotify": true
     }
 ]

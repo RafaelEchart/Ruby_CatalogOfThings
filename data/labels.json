@@ -1,0 +1,21 @@
+[
+    {
+        "previous_id": "#<Label:0x000001a5d44c64d8>",
+        "id": 50,
+        "title": "label 1 m",
+        "color": "green",
+        "items": [
+            "#<Book:0x000001a5d44c5a60>",
+            "#<MusicAlbum:0x000001a5d449aa90>"
+        ]
+    },
+    {
+        "previous_id": "#<Label:0x000001a5d44ae888>",
+        "id": 24,
+        "title": "Games",
+        "color": "green",
+        "items": [
+            "#<Game:0x000001a5d44ae608>"
+        ]
+    }
+]
