@@ -1,6 +1,7 @@
 require_relative './methods/add_books'
 require_relative './methods/show_books'
 require_relative './methods/add_albums'
+require_relative './methods/show_albums'
 require_relative 'menu'
 
 class App
@@ -8,6 +9,7 @@ class App
     @add_books = AddBooks.new
     @show_books = ShowBooks.new
     @add_albums = AddAlbums.new
+    @show_albums = ShowAlbums.new
     menu
   end
 
@@ -17,7 +19,7 @@ class App
     when '1'
       @show_books.show
     when '2'
-      # puts 'List of all music albums'
+      @show_albums.show
     when '3'
       # List of games
     when '4'

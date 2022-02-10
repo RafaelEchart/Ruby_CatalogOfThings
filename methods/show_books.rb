@@ -1,5 +1,4 @@
 require_relative '../memory/books_memory'
-require 'io/console'
 
 class ShowBooks
   include BooksMemory
@@ -17,7 +16,7 @@ class ShowBooks
           puts "#{@books.find_index(book)}) Title: #{book.name}, Author: #{book.author.first_name}"
         end
         puts "#{@books.length}) EXIT TO MENU"
-        puts 'Please select a book for information'
+        puts 'Please select a book for more information'
         selected_book = gets.chomp.to_i
       end
 
