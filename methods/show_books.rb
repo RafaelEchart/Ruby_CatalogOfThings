@@ -12,10 +12,7 @@ class ShowBooks
     if @books.length.positive?
       selected_book = @books.length + 1
       while selected_book > @books.length
-        @books.each do |book|
-          puts "#{@books.find_index(book)}) Title: #{book.name}, Author: #{book.author.first_name}"
-        end
-        puts ''
+        show_saved_books(@books)
         puts "#{@books.length}) EXIT TO MENU"
         puts 'Please select a book for more information'
         selected_book = gets.chomp.to_i
@@ -33,6 +30,12 @@ class ShowBooks
     else
       puts 'Empty Library, add a book first'
 
+    end
+  end
+
+  def show_saved_books(data)
+    data.each do |book|
+      puts "#{data.find_index(book)}) Title: #{book.name}, Author: #{book.author.first_name}"
     end
   end
 end
