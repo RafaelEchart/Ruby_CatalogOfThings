@@ -21,6 +21,6 @@ class AddAlbums
     genre.add_item(new_album)
     author.add_item(new_album)
 
-    puts 'Book created successfully'
+    puts 'Album created successfully'
   end
 end

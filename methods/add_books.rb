@@ -1,7 +1,4 @@
 require_relative '../classes/book'
-require_relative '../classes/author'
-require_relative '../classes/genre'
-require_relative '../classes/label'
 require_relative '../memory/books_memory'
 require_relative '../inputs/general_inputs'
 require_relative '../inputs/book_inputs'
