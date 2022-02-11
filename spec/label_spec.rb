@@ -6,7 +6,7 @@ describe Label do
     @label = Label.new('Gryffindor', 'red')
     @book = Book.new('Harry Potter', 'Hogwarts', 'bad', 10, @genre, 'JK Tolkien', 'Yellow')
   end
-  
+
   context 'When testing Label class' do
     it 'it should return the correct title' do
       expect(@label.title).to eql 'Gryffindor'
