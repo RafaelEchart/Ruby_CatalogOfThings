@@ -1,56 +1,94 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Ruby - Catalog of things
 
-> Description the project.
-
+> In this project, a console app will help you to keep a record of different types of things you won: books, music albums, movies, and games.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Rubocop
+- Rspec
 
-## Live Demo (if available)
+## Explanation Video
 
-[Live Demo Link](https://livedemo.com)
-
+[VIDEO](https://drive.google.com/file/d/1s0Ob1X2-Ex3HXeETBIslktby0UsgPKQS/view?usp=sharing)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+you could either scroll to the top of repo you will see button with dropdown `code` select option `download as ZIP` then you are good to go.
+You could alternatively clone the repo following these commands:
+
+```shell
+  git clone https://github.com/RafaelEchart/Ruby_CatalogOfThings.git
+
+  cd Ruby_CatalogOfThings # open project directory
+
+  gem install json
+  gem install rubocop
+
+  code . # if you want to open it on vs code
+
+  
+```
 
 ### Prerequisites
 
-### Setup
+> Ruby <br>
+> Bundler
 
 ### Install
 
+To install all dependencies listed in `Gemfile`, run this command:
+
+```shell
+  bundle install
+```
+
+It might ask you for your PC password because it's installing file on your system files.
+
 ### Usage
+
+To use the console application you can start by simply running command in the project's root directory
+
+```shell
+  ruby main.rb
+```
 
 ### Run tests
 
-### Deployment
+To run all tests you could simply run this command:
 
+```shell
+  rspec
+```
 
+If you choose to run certain file you can use this command:
+
+```shell
+  rspec spec filename_spec.rb
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **Rafael Echart**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@RafaelEchart](https://github.com/RafaelEchart)
+- LinkedIn: [Rafael Echart](https://www.linkedin.com/in/rafaelechart/)
+- Twitter: [@RafaelEchart](https://twitter.com/RafaelEchart)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Eze Promise**
+
+- GitHub: [@codepantherr](https://github.com/codepantherr)
+- Twitter: [@codepantherr](https://twitter.com/codepantherr)
+- LinkedIn: [Eze Promise](https://www.linkedin.com/in/promise-eze/)
+
+👤 **Amr Ahmed**
+
+- GitHub: [@Amrhub](https://github.com/Amrhub)
+- LinkedIn: [Amr Ahmed](https://www.linkedin.com/in/amr-abdelrehim-ahmed/)
 
 ## 🤝 Contributing
 
@@ -64,9 +102,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse Documentation ⭐️
+- Promise & Rafael & Amr ⭐️
 
 ## 📝 License
 
