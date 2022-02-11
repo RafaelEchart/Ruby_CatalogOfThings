@@ -12,9 +12,16 @@ class Game < Item
   end
   # rubocop:enable Metrics/ParameterLists
 
+  def archived?
+    can_be_archived?
+  end
+
   private
 
-  def can_be_archived?
-    Date.today > Date.iso8601(@last_played_at).next_year(2) || super
+  def can_be_achived?()
+    date = DateTime.now.year
+    return true if super && date - @last_played_at > 2
+
+    false
   end
 end

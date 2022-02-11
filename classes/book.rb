@@ -12,6 +12,10 @@ class Book < Item
   end
   # rubocop:enable Metrics/ParameterLists
 
+  def archived?
+    can_be_archived?
+  end
+
   private
 
   def can_be_archived?
