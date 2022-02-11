@@ -22,6 +22,10 @@ class Item
     @archive = can_be_archived?
   end
 
+  def archived?
+    can_be_archived?
+  end
+
   private
 
   def can_be_archived?
