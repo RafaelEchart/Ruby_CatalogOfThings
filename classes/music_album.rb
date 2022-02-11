@@ -9,6 +9,10 @@ class MusicAlbum < Item
     super(publish_date, genre: genre, author: author, label: label)
   end
 
+  def archived?
+    can_be_archived?
+  end
+
   private
 
   def can_be_archived?
