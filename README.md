@@ -10,6 +10,10 @@
 - Rubocop
 - Rspec
 
+## Explanation Video
+
+[VIDEO](https://drive.google.com/file/d/1s0Ob1X2-Ex3HXeETBIslktby0UsgPKQS/view?usp=sharing)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -21,7 +25,12 @@ You could alternatively clone the repo following these commands:
 
   cd Ruby_CatalogOfThings # open project directory
 
+  gem install json
+  gem install rubocop
+
   code . # if you want to open it on vs code
+
+  
 ```
 
 ### Prerequisites
@@ -67,6 +76,8 @@ If you choose to run certain file you can use this command:
 
 - GitHub: [@RafaelEchart](https://github.com/RafaelEchart)
 - LinkedIn: [Rafael Echart](https://www.linkedin.com/in/rafaelechart/)
+- Twitter: [@RafaelEchart](https://twitter.com/RafaelEchart)
+
 
 👤 **Eze Promise**
 
