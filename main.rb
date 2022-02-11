@@ -7,10 +7,16 @@ require_relative './methods/show_games'
 require_relative './methods/show_genre'
 require_relative './methods/show_authors'
 require_relative './methods/show_labels'
+require_relative './memory/save_json'
+require_relative './memory/load_json'
 require_relative 'menu'
 
 class App
+  include SaveJSON
+  include LoadData
+
   def welcome
+    start_process
     @add_books = AddBooks.new
     @show_books = ShowBooks.new
     @add_albums = AddAlbums.new
@@ -36,6 +42,7 @@ class App
     when '8' then @add_albums.add
     when '9' then @add_games.add
     when '10'
+      start_save
       puts "\nThanks for your visit, have a great day!"
       abort
 
