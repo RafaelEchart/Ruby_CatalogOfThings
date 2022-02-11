@@ -12,6 +12,9 @@ require_relative '../classes/book'
 require_relative '../classes/game'
 require_relative '../classes/genre'
 require_relative '../classes/label'
+# rubocop:disable Metrics/ModuleLength
+# rubocop:disable Metrics/PerceivedComplexity
+# rubocop:disable Style/ClassVars
 
 module LoadData
   include AlbumsMemory
@@ -21,7 +24,6 @@ module LoadData
   include GenreMemory
   include LabelMemory
 
-  # rubocop:disable Style/ClassVars
   @@array_genres = []
   @@array_authors = []
   @@array_labels = []
@@ -97,12 +99,16 @@ module LoadData
 
       new_book = Book.new(data['name'], data['publisher'], data['cover_state'], data['publish_date'], matched_genre,
                           matched_author, matched_label)
-      add_books(new_book)
 
-      matched_label.add_item(new_book)
-      matched_genre.add_item(new_book)
-      matched_author.add_item(new_book)
+      save_books(new_book, matched_author, matched_genre, matched_label)
     end
+  end
+
+  def save_books(new_book, matched_author, matched_genre, matched_label)
+    add_books(new_book)
+    matched_label.add_item(new_book)
+    matched_genre.add_item(new_book)
+    matched_author.add_item(new_book)
   end
 
   def create_albums
@@ -129,11 +135,15 @@ module LoadData
       new_album = MusicAlbum.new(data['name'], data['publish_date'], matched_genre,
                                  matched_author, matched_label, on_spotify: data['on_spotify'])
 
-      add_albums(new_album)
-      matched_label.add_item(new_album)
-      matched_genre.add_item(new_album)
-      matched_author.add_item(new_album)
+      save_albums(new_album, matched_author, matched_genre, matched_label)
     end
+  end
+
+  def save_albums(new_album, matched_author, matched_genre, matched_label)
+    add_albums(new_album)
+    matched_label.add_item(new_album)
+    matched_genre.add_item(new_album)
+    matched_author.add_item(new_album)
   end
 
   def create_games
@@ -160,11 +170,17 @@ module LoadData
       new_game = Game.new(data['name'], data['publish_date'], matched_genre,
                           matched_author, matched_label, data['last_played'], data['multiplayer'])
 
-      add_games(new_game)
-      matched_label.add_item(new_game)
-      matched_genre.add_item(new_game)
-      matched_author.add_item(new_game)
+      save_games(new_game, matched_author, matched_genre, matched_label)
     end
+  end
+
+  def save_games(new_game, matched_author, matched_genre, matched_label)
+    add_games(new_game)
+    matched_label.add_item(new_game)
+    matched_genre.add_item(new_game)
+    matched_author.add_item(new_game)
   end
 end
 # rubocop:enable Style/ClassVars
+# rubocop:enable Metrics/ModuleLength
+# rubocop:enable Metrics/PerceivedComplexity
